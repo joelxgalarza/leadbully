@@ -3,6 +3,10 @@ acceptedCallCount = 0;
 voicemailCount = 0;
 canceledCallCount = 0;
 dialsToNextConversation = -999;
+demoCallCount = 0;
+dialsToNextDemo = -999;
+notInterestedCount = 0;
+followUpCount = 0;
 
 
 //increments counters for  amount of calls made
@@ -20,6 +24,8 @@ function incrementAcceptedCalls(){
     element = document.getElementById("calls-accepted");
     element.textContent = acceptedCallCount;
     calculateDialsToNextConversation();
+    document.getElementById("accepted-calls-modal").showModal();
+
 }
 function incrementVoicemailCount(){
     voicemailCount++;
@@ -47,5 +53,36 @@ function decrementDialsToNextConversation(){
     else {
         dialsToNextConversation--;
         document.getElementById("dials-to-conversation").textContent = dialsToNextConversation;
+    }
+}
+function incrementDemoCallCount(){
+    demoCallCount++;
+    document.getElementById('demo-calls-booked').textContent = demoCallCount;
+    document.getElementById('accepted-calls-modal').close();
+    calculateDialsToNextDemo();
+}
+function incrementNotInterestedCount(){
+    notInterestedCount++;
+    document.getElementById('accepted-calls-modal').close();
+    decrementDialsToDemo();
+}
+function incrementFollowUpCount(){
+    followUpCount++;
+    document.getElementById('accepted-calls-modal').close();
+    decrementDialsToDemo();
+}
+function calculateDialsToNextDemo(){
+    dialsToNextDemo = Math.floor(dialCount/demoCallCount)+1;
+    document.getElementById("dials-to-next-demo").textContent = dialsToNextDemo;
+    console.log(dialsToNextDemo);
+    return dialsToNextDemo;
+}
+function decrementDialsToDemo(){
+    if(dialsToNextDemo < 1){
+        document.getElementById("dials-to-next-demo").textContent = "Recalculating";
+    }
+    else {
+        dialsToNextDemo--;
+        document.getElementById("dials-to-next-demo").textContent = dialsToNextDemo;
     }
 }
