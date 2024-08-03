@@ -1,0 +1,43 @@
+<!DOCTYPE html
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeadBully</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <h1>LeadBully</h1>
+      </div>
+      <div class="info-card-collection">
+        <div class="info-card">
+          <dialog id="call-actions-modal" class="call-actions-modal">
+            <p>How did it go?</p>
+            <div class="call-actions-modal-buttons">
+            <button onclick="incrementAcceptedCalls()" style="background-color: greenyellow;">accepted call</button>
+            <button onclick="incrementVoicemailCount()" style="background-color: orange;">voicemail</button>
+            <button onclick="incrementCanceledCallCount()" style="background-color: brown;">canceled call</button>
+            </div>
+          </dialog>
+          <h2 class="info-card-title">Convo Tracker</h2>
+          <p class="info-card-item">Calls Made: <span class="calls-made"></span></p>
+          <p class="info-card-item">Calls Accepted: <span id="calls-accepted"></span></p>
+          <p class="info-card-item">Dials to next conversation: <span id="dials-to-conversation"></span></p>
+        </div>
+        <div class="info-card">
+          <button onclick="incrementDialCount()" class="card-button" id="add-dial-button">&phone; Dial</button>
+        </div>
+        <div class="info-card">
+          <h2 class="info-card-title">Win Rates</h2>
+          <p class="info-card-item">Demo Calls Booked: </p>
+          <p class="info-card-item">Dials to next demo: </p>
+        </div>
+    </div>
+    <script src="scripts.js" async defer></script>
+    </div>
+  </body>
+</html>

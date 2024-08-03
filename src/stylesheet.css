@@ -1,0 +1,64 @@
+body { 
+    background-color: black;
+    color: white;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    text-align: center;
+}
+.info-card-collection{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+.info-card{
+    text-align: center;
+    height: 250px;
+    background-color: rgba(193, 226, 255, 0.307);
+    width: 100%;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.152);
+}
+.card-button{
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.058);
+    border-style: solid;
+    border-color: aliceblue;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+.card-button:hover{
+    background-color: rgba(255, 255, 255, 0.859);
+    color: black;
+    transition: .05s;
+}
+#add-dial-button{
+    background-color: rgba(0, 206, 0, 0.635);
+    border-color: rgb(0, 37, 0);
+}
+#add-dial-button:hover{
+    background-color: rgb(25, 229, 25);
+    border-color: rgb(0, 37, 0);
+}
+.call-actions-modal{
+    width: 400px;
+    height: 500px;
+}
+.call-actions-modal-buttons{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    grid-template-rows: minmax(auto);
+}
+.call-actions-modal button{
+}
