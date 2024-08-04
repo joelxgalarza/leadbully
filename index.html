@@ -17,7 +17,6 @@
       <div class="info-card-collection">
         <div class="info-card">
           <dialog id="call-actions-modal" class="call-actions-modal">
-            <p>How did it go?</p>
             <div class="call-actions-modal-button-container">
             <button class="call-actions-modal-button" onclick="incrementAcceptedCalls()" style="background-color: greenyellow;">accepted call</button>
             <button class="call-actions-modal-button" onclick="incrementVoicemailCount()" style="background-color: orange;">voicemail</button>
@@ -29,9 +28,8 @@
               <button class="accepted-calls-modal-buttons" style="background-color: greenyellow;"onclick="incrementDemoCallCount()">Demo Booked</button>
               <button class="accepted-calls-modal-buttons" style="background-color: rgb(0, 83, 207);" onclick="incrementNotInterestedCount()">Not Interested</button>
               <button class="accepted-calls-modal-buttons"  style="background-color: orange;" onclick="incrementFollowUpCount()">Follow Up</button>
-              <button class="accepted-calls-modal-buttons" style="background-color: brown;" onclick="">This is here for symmetry </button>
             </div>
-            </dialog>
+          </dialog>
           <h2 class="info-card-title">Convo Tracker</h2>
           <p class="info-card-item">Calls Made: <span class="calls-made"></span></p>
           <p class="info-card-item">Calls Accepted: <span id="calls-accepted"></span></p>
